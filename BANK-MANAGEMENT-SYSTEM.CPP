@@ -8,6 +8,7 @@
 #include<conio.h>
 #include<stdio.h>
 #include<string>
+#include<stdlib.h>
 using namespace std;
 
 //***************************************************************
@@ -17,7 +18,7 @@ using namespace std;
 class account
 {
 	int acno;
-	string name;
+    char name[100];
 	int deposit;
 	char type;
 public:
@@ -49,8 +50,7 @@ void account::create_account()
 void account::show_account()
 {
 	cout<<"\nAccount No. : "<<acno;
-	cout<<"\nAccount Holder Name : ";
-	cout<<name;
+	cout<<"\nAccount Holder Name : "<<name;
 	cout<<"\nType of Account : "<<type;
 	cout<<"\nBalance amount : "<<deposit;
 }
@@ -82,7 +82,7 @@ void account::draw(int x)
 
 void account::report()
 {
-	cout<<acno<<setw(10)<<" "<<name<<setw(10)<<" "<<type<<setw(6)<<deposit<<endl;
+	cout<<acno<<setw(12)<<" "<<name<<setw(8)<<" "<<type<<setw(15)<<deposit<<endl;
 }
 
 int account::retacno()
@@ -302,7 +302,7 @@ void display_all()
 	}
 	cout<<"\n\n\t\tACCOUNT HOLDER LIST\n\n";
 	cout<<"====================================================\n";
-	cout<<"A/c no.      NAME           Type  Balance\n";
+	cout<<"A/c no.      NAME\tType\tBalance\n";
 	cout<<"====================================================\n";
 	while(inFile.read((char *) &ac, sizeof(account)))
 	{
