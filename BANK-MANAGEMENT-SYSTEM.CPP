@@ -118,7 +118,7 @@ void intro();	//introductory screen function
 
 int main()
 {
-	char ch;
+	int ch;
 	int num;
 	system("cls");
 	intro();
@@ -166,11 +166,11 @@ int main()
 			modify_account(num);
 			break;
 		 case '8':
-			cout<<"\n\n\tThanks for using bank managemnt system";
+			cout<<"\n\n\tThanks for using bank management system";
 			break;
 		 default :cout<<"\a";
 		}
-		getch();
+	
     }while(ch!='8');
 	return 0;
 }
