@@ -139,39 +139,39 @@ int main()
 		system("cls");
 		switch(ch)
 		{
-		case '1':
+		case  1:
 			write_account();
 			break;
-		case '2':
+		case  2:
 			cout<<"\n\n\tEnter The account No. : "; cin>>num;
 			deposit_withdraw(num, 1);
 			break;
-		case '3':
+		case  3:
 			cout<<"\n\n\tEnter The account No. : "; cin>>num;
 			deposit_withdraw(num, 2);
 			break;
-		case '4':
+		case  4:
 			cout<<"\n\n\tEnter The account No. : "; cin>>num;
 			display_sp(num);
 			break;
-		case '5':
+		case  5:
 			display_all();
 			break;
-		case '6':
+		case  6:
 			cout<<"\n\n\tEnter The account No. : "; cin>>num;
 			delete_account(num);
 			break;
-		 case '7':
+		 case 7:
 			cout<<"\n\n\tEnter The account No. : "; cin>>num;
 			modify_account(num);
 			break;
-		 case '8':
+		 case 8:
 			cout<<"\n\n\tThanks for using bank management system";
 			break;
 		 default :cout<<"\a";
 		}
-	
-    }while(ch!='8');
+	getch();
+    }while(ch!=8);
 	return 0;
 }
 
